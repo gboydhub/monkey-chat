@@ -3,7 +3,8 @@
 
 To use:
 ```
-npm init & npm run
+npm init
+npm start
 ```
 
 Default port is 3000, configured in bin/www
