@@ -12,7 +12,7 @@ module.exports = (sequelize, DataTypes) => {
   }, {});
   Message.associate = function(models) {
     Message.belongsTo(models.ChatRoom, {
-      foreignKey: 'msgId',
+      foreignKey: 'roomId',
       onDelete: 'CASCADE'
     })
   };
