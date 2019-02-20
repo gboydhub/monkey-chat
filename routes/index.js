@@ -2,8 +2,7 @@ var express = require('express');
 var router = express.Router();
 
 /* GET home page. */
-router.get('/:name', function(req, res, next) {
-  console.log(res.params);
+router.get('/', function(req, res, next) {
   res.render('index', { motd: 'Future site of Monkey Chat' });
 });
 
