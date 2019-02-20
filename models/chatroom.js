@@ -8,7 +8,7 @@ module.exports = (sequelize, DataTypes) => {
   }, {});
   ChatRoom.associate = function(models) {
     ChatRoom.hasMany(models.Message, {
-      foreignKey: 'msgId',
+      foreignKey: 'roomId',
       as: 'messages'
     })
   };

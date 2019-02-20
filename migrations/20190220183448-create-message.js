@@ -8,14 +8,13 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      timestamp: {
-        type: Sequelize.DATE
-      },
       text: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
+        allowNull: false
       },
       owner: {
-        type: Sequelize.UUID
+        type: Sequelize.UUID,
+        allowNull: false
       },
       createdAt: {
         allowNull: false,
@@ -24,6 +23,15 @@ module.exports = {
       updatedAt: {
         allowNull: false,
         type: Sequelize.DATE
+      },
+      roomId: {
+        type: Sequelize.INTEGER,
+        onDelete: 'CASCADE',
+        references: {
+          model: 'ChatRoom',
+          key: 'id',
+          as: 'roomId'
+        }
       }
     });
   },
